@@ -1,1 +1,5 @@
-/* Empty. Add your own CSS if you like */
+img { /*防止图片过大*/
+	max-width:100%;
+	height:auto;
+}
+
