@@ -1,0 +1,12 @@
+<ion-view view-title="偶看博客-微博客">
+    <ion-content class="padding">
+        <div class="list card" ng-repeat="p in weiboList">
+            <div ng-click="weiboItem(p.ID)">
+                <div class="item item-divider">{{p.title}}</div>
+                <div class="item item-body">
+                    <div ng-bind-html="p.excerpt"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
