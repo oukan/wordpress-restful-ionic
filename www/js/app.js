@@ -37,34 +37,42 @@ angular.module('oukanblog', [
         })
 
     .state('tab.dash', {
-        url: '/dash',
-        views: {
-            'tab-dash': {
-                templateUrl: 'templates/tab-dash.html',
-                controller: 'DashCtrl'
+            url: '/dash',
+            views: {
+                'tab-dash': {
+                    templateUrl: 'templates/tab-dash.html',
+                    controller: 'DashCtrl'
+                }
             }
-        }
-    })
+        })
+        .state('tab.category', {
+            url: '/category/:categorySlug',
+            views: {
+                'tab-dash': {
+                    templateUrl: 'templates/category.html',
+                    controller: 'CategoryCtrl'
+                }
+            }
+        })
+        .state('tab.post-item', {
+            url: "/post-item/:postId",
+            views: {
+                'tab-dash': {
+                    templateUrl: 'templates/post-item.html',
+                    controller: 'PostItemCtrl'
+                }
+            }
+        })
 
-    .state('tab.category', {
-        url: '/category/:categorySlug',
-        views: {
-            'tab-dash': {
-                templateUrl: 'templates/category.html',
-                controller: 'CategoryCtrl'
+    .state('tab.search', {
+            url: '/search',
+            views: {
+                'tab-dash': {
+                    templateUrl: 'templates/search.html',
+                    controller: 'SearchCtrl'
+                }
             }
-        }
-    })
-
-    .state('tab.postItem', {
-        url: "/postItem/:postId",
-        views: {
-            'tab-dash': {
-                templateUrl: 'templates/post-item.html',
-                controller: 'PostItemCtrl'
-            }
-        }
-    })
+        })
 
     .state('tab.weibo', {
             url: '/weibo',

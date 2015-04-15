@@ -1,0 +1,22 @@
+<ion-view view-title="搜索{{searchTitle}}">
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="搜索词" ng-model="searchTerm">
+                </label>
+                <button class="button button-positive" ng-click="search(searchTerm)">
+                    Search
+                </button>
+            </div>
+        </div>
+        <div class="list card" ng-repeat="p in postList">
+            <div ng-click="postItem(p.ID)">
+                <div class="item item-divider">{{p.title}}</div>
+                <div class="item item-body">
+                    <div ng-bind-html="p.excerpt"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

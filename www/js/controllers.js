@@ -1,6 +1,7 @@
 angular.module('oukanblog.controllers', [])
+
 //侧边栏菜单
-.controller('SideMenus', function($rootScope,$scope, $state, $ionicSideMenuDelegate, TaxonomiesRes) {
+.controller('SideMenus', function($rootScope, $scope, $state, $ionicSideMenuDelegate, TaxonomiesRes) {
     $scope.toggleLeft = function() {
         $ionicSideMenuDelegate.toggleLeft();
     };
@@ -16,6 +17,26 @@ angular.module('oukanblog.controllers', [])
         });
     }
 })
+
+//搜索
+.controller('SearchCtrl', function($scope, PostsRes) {
+    $scope.search = function(searchTerm) {
+        var theQquery = 'filter[s]=' + searchTerm;
+        PostsRes.query({
+            theQquery: theQquery
+        }, function(data) {
+            $scope.postList = data;
+        });
+    };
+
+    $scope.postItem = function(postId) {
+        $state.go('tab.post-item', {
+            postId: postId
+        });
+    };
+
+})
+
 //获得文章列表
 .controller('DashCtrl', function($scope, $state, PostsRes) {
     PostsRes.query({
@@ -25,11 +46,12 @@ angular.module('oukanblog.controllers', [])
     });
 
     $scope.postItem = function(postId) {
-        $state.go('tab.postItem', {
+        $state.go('tab.post-item', {
             postId: postId
         });
     };
 })
+
 //文章内容
 .controller('PostItemCtrl', function($scope, $stateParams, PostItemRes) {
     var postId = $stateParams.postId;
@@ -40,7 +62,8 @@ angular.module('oukanblog.controllers', [])
     });
 
 })
-//微博客--待优化
+
+//微博客
 .controller('WeiboCtrl', function($scope, $state, PostsRes) {
     PostsRes.query({
         theQquery: 'filter[category_name]=weibo'
@@ -48,25 +71,26 @@ angular.module('oukanblog.controllers', [])
         $scope.weiboList = data;
     });
 
-    $scope.postItem = function(postId) {
-        $state.go('tab.postItem', {
+    $scope.weiboItem = function(postId) {
+        $state.go('tab.weibo-item', {
             postId: postId
         });
     }
 })
+
 //分类目录
-.controller('CategoryCtrl', function($rootScope,$scope, $state, $stateParams, PostsRes) {
+.controller('CategoryCtrl', function($rootScope, $scope, $state, $stateParams, PostsRes) {
     var categorySlug = $stateParams.categorySlug,
         theQquery = 'filter[category_name]=' + categorySlug;
-     $scope.categoryName = $rootScope.categoryName;
+    $scope.categoryName = $rootScope.categoryName;
     PostsRes.query({
         theQquery: theQquery
     }, function(data) {
         $scope.postList = data;
     });
 
-    $scope.weiboItem = function(postId) {
-        $state.go('tab.weibo-item', {
+    $scope.postItem = function(postId) {
+        $state.go('tab.post-item', {
             postId: postId
         }, {
             reload: true
