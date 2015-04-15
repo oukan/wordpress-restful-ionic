@@ -4,7 +4,12 @@
  * 基于 tabs 修改
  */
 
-angular.module('oukanblog', ['ionic', 'ngResource', 'oukanblog.controllers', 'oukanblog.services'])
+angular.module('oukanblog', [
+    'ionic',
+    'ngResource',
+    'oukanblog.controllers',
+    'oukanblog.services'
+])
 
 .run(function($ionicPlatform) {
         $ionicPlatform.ready(function() {

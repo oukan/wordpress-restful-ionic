@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.oukanwordpressionic519302" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>oukan-wordpress-ionic</name>
   <description>
-        An Ionic Framework and Cordova project.
+       Wordpress使用WP-REST-API插件作为RESTful后台，通过Ionic来读取数据，并制作成APP。通过Wordpress强大的插件，可以满足大部分需求。
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="23leo@163.com" href="http://www.oukan.net/">
+      oukan
     </author>
   <content src="index.html"/>
   <access origin="*"/>
