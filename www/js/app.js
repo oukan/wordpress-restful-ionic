@@ -41,6 +41,16 @@ angular.module('oukanblog', ['ionic', 'ngResource', 'oukanblog.controllers', 'ou
         }
     })
 
+    .state('tab.category', {
+        url: '/category/:categorySlug',
+        views: {
+            'tab-dash': {
+                templateUrl: 'templates/category.html',
+                controller: 'CategoryCtrl'
+            }
+        }
+    })
+
     .state('tab.postItem', {
         url: "/postItem/:postId",
         views: {

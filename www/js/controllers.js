@@ -1,5 +1,22 @@
 angular.module('oukanblog.controllers', [])
 
+.controller('SideMenus', function($rootScope,$scope, $state, $ionicSideMenuDelegate, TaxonomiesRes) {
+    $scope.toggleLeft = function() {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
+
+    TaxonomiesRes.query({}, function(data) {
+        $scope.taxonomies = data;
+    });
+
+    $scope.category = function(name, slug) {
+        $rootScope.categoryName = name;
+        $state.go('tab.category', {
+            categorySlug: slug
+        });
+    }
+})
+
 .controller('DashCtrl', function($scope, $state, PostsRes) {
     PostsRes.query({
         theQquery: 'filter[posts_per_page]=10'
@@ -10,10 +27,8 @@ angular.module('oukanblog.controllers', [])
     $scope.postItem = function(postId) {
         $state.go('tab.postItem', {
             postId: postId
-        }, {
-            reload: true
         });
-    }
+    };
 })
 
 .controller('PostItemCtrl', function($scope, $stateParams, PostItemRes) {
@@ -33,6 +48,23 @@ angular.module('oukanblog.controllers', [])
         $scope.weiboList = data;
     });
 
+    $scope.postItem = function(postId) {
+        $state.go('tab.postItem', {
+            postId: postId
+        });
+    }
+})
+
+.controller('CategoryCtrl', function($rootScope,$scope, $state, $stateParams, PostsRes) {
+    var categorySlug = $stateParams.categorySlug,
+        theQquery = 'filter[category_name]=' + categorySlug;
+     $scope.categoryName = $rootScope.categoryName;
+    PostsRes.query({
+        theQquery: theQquery
+    }, function(data) {
+        $scope.postList = data;
+    });
+
     $scope.weiboItem = function(postId) {
         $state.go('tab.weibo-item', {
             postId: postId
@@ -45,8 +77,8 @@ angular.module('oukanblog.controllers', [])
 
 .controller('AccountCtrl', function($scope, PageItemRes) {
     PageItemRes.get({
-    	pageId: '605'
-    },function(data){
-    	$scope.about = data;
+        pageId: '605'
+    }, function(data) {
+        $scope.about = data;
     })
 });
