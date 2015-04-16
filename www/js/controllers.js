@@ -38,11 +38,30 @@ angular.module('oukanblog.controllers', [])
 })
 
 //获得文章列表
-.controller('DashCtrl', function($scope, $state, PostsRes) {
-    PostsRes.query({
-        theQquery: 'filter[posts_per_page]=10'
-    }, function(data) {
-        $scope.postList = data;
+.controller('DashCtrl', function($rootScope, $scope, $state, PostsRes) {
+    $scope.init = {
+        busy: true,
+        after: 1,
+        page: 1,
+        perPage: 10
+    };
+    $scope.items = [];
+    $scope.loadMore = function() {
+        var theQquery = 'filter[posts_per_page]=' + $scope.init.perPage + '&page=' + $scope.init.page;
+        PostsRes.query({
+            theQquery: theQquery
+        }, function(data) {
+            for (var i = 0; i < data.length; i++) {
+                $scope.items.push(data[i]);
+            }
+            $scope.init.page++;
+            data.length === 0 ? $scope.init.busy = false : $scope.init.busy = true; // 是否结束
+            $rootScope.$broadcast('scroll.infiniteScrollComplete');
+        });
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+        $scope.loadMore();
     });
 
     $scope.postItem = function(postId) {
@@ -80,13 +99,32 @@ angular.module('oukanblog.controllers', [])
 
 //分类目录
 .controller('CategoryCtrl', function($rootScope, $scope, $state, $stateParams, PostsRes) {
-    var categorySlug = $stateParams.categorySlug,
-        theQquery = 'filter[category_name]=' + categorySlug;
+    var categorySlug = $stateParams.categorySlug;
     $scope.categoryName = $rootScope.categoryName;
-    PostsRes.query({
-        theQquery: theQquery
-    }, function(data) {
-        $scope.postList = data;
+
+    $scope.init = {
+        busy: true,
+        after: 1,
+        page: 1,
+        perPage: 10
+    };
+    $scope.items = [];
+    $scope.loadMore = function() {
+        var theQquery = 'filter[category_name]=' + categorySlug + '&filter[posts_per_page]=' + $scope.init.perPage + '&page=' + $scope.init.page;
+        PostsRes.query({
+            theQquery: theQquery
+        }, function(data) {
+            for (var i = 0; i < data.length; i++) {
+                $scope.items.push(data[i]);
+            }
+            $scope.init.page++;
+            data.length === 0 ? $scope.init.busy = false : $scope.init.busy = true; // 是否结束
+            $rootScope.$broadcast('scroll.infiniteScrollComplete');
+        });
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+        $scope.loadMore();
     });
 
     $scope.postItem = function(postId) {

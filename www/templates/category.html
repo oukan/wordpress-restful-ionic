@@ -1,6 +1,6 @@
 <ion-view view-title="{{categoryName}}">
     <ion-content class="padding">
-        <div class="list card" ng-repeat="p in postList">
+        <div class="list card" ng-repeat="p in items">
             <div ng-click="postItem(p.ID)">
                 <div class="item item-divider">{{p.title}}</div>
                 <div class="item item-body">
@@ -8,5 +8,7 @@
                 </div>
             </div>
         </div>
+        <ion-infinite-scroll ng-if="init.busy" on-infinite="loadMore()" distance="1%">
+        </ion-infinite-scroll>
     </ion-content>
 </ion-view>
