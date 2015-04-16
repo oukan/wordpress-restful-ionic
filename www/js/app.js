@@ -1,6 +1,6 @@
 /* by: 偶看 
  * http://www.oukan.net
- * 2015-04-14
+ * 2015-04-16
  * 基于 tabs 修改
  */
 
@@ -25,7 +25,8 @@ angular.module('oukanblog', [
         });
     })
     .constant('configuration', {
-        apiUrl: 'http://www.oukan.net/wp-json'
+        apiUrl: 'http://www.oukan.net/wp-json',
+        websiteName: '偶看博客'
     })
 
 .config(function($stateProvider, $urlRouterProvider) {

@@ -1,7 +1,8 @@
 angular.module('oukanblog.controllers', [])
 
 //侧边栏菜单
-.controller('SideMenus', function($rootScope, $scope, $state, $ionicSideMenuDelegate, TaxonomiesRes) {
+.controller('SideMenus', function($rootScope, $scope, $state, $ionicSideMenuDelegate, configuration, TaxonomiesRes) {
+    $scope.websiteName = configuration.websiteName
     $scope.toggleLeft = function() {
         $ionicSideMenuDelegate.toggleLeft();
     };
@@ -38,7 +39,8 @@ angular.module('oukanblog.controllers', [])
 })
 
 //获得文章列表
-.controller('DashCtrl', function($rootScope, $scope, $state, PostsRes) {
+.controller('DashCtrl', function($rootScope, $scope, $state, configuration, PostsRes) {
+    $scope.websiteName = configuration.websiteName
     $scope.init = {
         busy: true,
         after: 1,
