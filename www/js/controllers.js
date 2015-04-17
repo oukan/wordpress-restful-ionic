@@ -84,25 +84,14 @@ angular.module('oukanblog.controllers', [])
 
 })
 
-//微博客
-.controller('WeiboCtrl', function($scope, $state, PostsRes) {
-    PostsRes.query({
-        theQquery: 'filter[category_name]=weibo'
-    }, function(data) {
-        $scope.weiboList = data;
-    });
-
-    $scope.weiboItem = function(postId) {
-        $state.go('tab.weibo-item', {
-            postId: postId
-        });
-    }
-})
-
 //分类目录
-.controller('CategoryCtrl', function($rootScope, $scope, $state, $stateParams, PostsRes) {
+.controller('CategoryCtrl', function($rootScope, $scope, $location,$state, $stateParams, PostsRes) {
     var categorySlug = $stateParams.categorySlug;
     $scope.categoryName = $rootScope.categoryName;
+    if($location.path().indexOf('weibo') !== -1){
+        $scope.categoryName  = '微博客';
+        categorySlug = 'weibo'
+    }
 
     $scope.init = {
         busy: true,

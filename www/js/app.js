@@ -80,7 +80,7 @@ angular.module('oukanblog', [
             views: {
                 'tab-weibo': {
                     templateUrl: 'templates/tab-weibo.html',
-                    controller: 'WeiboCtrl'
+                    controller: 'CategoryCtrl'
                 }
             }
         })
