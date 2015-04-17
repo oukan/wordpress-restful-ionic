@@ -1,0 +1,44 @@
+@charset "UTF-8";
+img {
+  /*防止图片过大*/
+  max-width: 100%;
+  height: auto; }
+
+.bubble {
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #B2B2B2;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  vertical-align: top; }
+
+.bubble::before {
+  background-color: #F2F2F2;
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  position: absolute;
+  top: 11px;
+  transform: rotate(29deg) skew(-35deg);
+  width: 20px; }
+
+.left {
+  float: left;
+  background: linear-gradient(0deg, #f5f5f5 0%, #fcfcfc 100%);
+  margin: 5px 45px 5px 20px; }
+
+.left::before {
+  box-shadow: -2px 2px 2px 0 rgba(245, 245, 245, 0.4);
+  background: linear-gradient(0deg, #f8f8f8 0%, #fafafa 100%);
+  left: -9px; }
+
+.right {
+  float: right;
+  background: linear-gradient(0deg, #e5eefd 0%, #f6f9fe 100%);
+  margin: 5px 20px 5px 45px; }
+
+.right::before {
+  box-shadow: 2px -2px 2px 0 rgba(178, 178, 178, 0.4);
+  background: linear-gradient(0deg, #F0F5FD 0%, #f6f9fe 100%);
+  right: -9px; }

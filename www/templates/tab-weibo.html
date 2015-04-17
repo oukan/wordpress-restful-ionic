@@ -1,9 +1,11 @@
 <ion-view view-title="{{categoryName}}">
     <ion-content class="padding">
-        <div class="list card" ng-repeat="p in items">
+        <div ng-repeat="p in items">
             <div ng-click="postItem(p.ID)">
-                <div class="item item-divider">{{p.title}}</div>
-                <div class="item item-body">
+                <div class="bubble left" ng-if="$even">
+                    <div ng-bind-html="p.excerpt"></div>
+                </div>
+                <div class="bubble right" ng-if="$odd">
                     <div ng-bind-html="p.excerpt"></div>
                 </div>
             </div>

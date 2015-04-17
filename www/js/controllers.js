@@ -20,7 +20,7 @@ angular.module('oukanblog.controllers', [])
 })
 
 //搜索
-.controller('SearchCtrl', function($scope, PostsRes) {
+.controller('SearchCtrl', function($scope, $state, PostsRes) {
     $scope.search = function(searchTerm) {
         var theQquery = 'filter[s]=' + searchTerm;
         PostsRes.query({
