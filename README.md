@@ -1,7 +1,7 @@
-# oukan-wordpress-ionic
-<p>oukan-wordpress-ionic是Wordpress使用WP-REST-API插件作为RESTful后台，再通过Ionic来读取数据，并制作成APP。 </p>
+# wordpress-restful-ionic
+<p>wordpress-restful-ionic是Wordpress使用WP-REST-API插件作为RESTful后台，再通过Ionic来读取数据，并制作成APP。 </p>
 <p>通过Wordpress强大的插件，可以满足大部分需求。</p>
-<p>该项目是偶看为学习并实践Ionic而制作，基于Ionic 1.0.1</p>
+<p>该项目是偶看为学习并实践Ionic而制作</p>
 
 
 <p>Ionic http://ionicframework.com/</p>
