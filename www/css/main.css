@@ -42,3 +42,8 @@ img {
   box-shadow: 2px -2px 2px 0 rgba(178, 178, 178, 0.4);
   background: linear-gradient(0deg, #F0F5FD 0%, #f6f9fe 100%);
   right: -9px; }
+
+.featured-image {
+  float: left;
+  padding-right: 10px;
+}
