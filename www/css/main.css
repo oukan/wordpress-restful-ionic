@@ -1,6 +1,6 @@
 @charset "UTF-8";
 img {
-  /*防止图片过大*/
+  /*防止图片过大 Prevent the picture is too large*/
   max-width: 100%;
   height: auto; }
 

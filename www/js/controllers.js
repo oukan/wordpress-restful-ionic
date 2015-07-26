@@ -1,6 +1,6 @@
 angular.module('oukanblog.controllers', [])
 
-//侧边栏菜单
+//侧边栏菜单 Sidebar menu
 .controller('SideMenus', function($rootScope, $scope, $state, $ionicSideMenuDelegate, configuration, TaxonomiesRes) {
     $scope.websiteName = configuration.websiteName
     $scope.toggleLeft = function() {
@@ -19,7 +19,7 @@ angular.module('oukanblog.controllers', [])
     }
 })
 
-//搜索
+//搜索 Search
 .controller('SearchCtrl', function($scope, $state, PostsRes) {
     $scope.search = function(searchTerm) {
         var theQquery = 'filter[s]=' + searchTerm;
@@ -38,7 +38,7 @@ angular.module('oukanblog.controllers', [])
 
 })
 
-//获得文章列表
+//获得文章列表 All posts list
 .controller('DashCtrl', function($rootScope, $scope, $state, configuration, PostsRes) {
     $scope.websiteName = configuration.websiteName
     $scope.init = {
@@ -73,7 +73,7 @@ angular.module('oukanblog.controllers', [])
     };
 })
 
-//文章内容
+//文章内容 Post content
 .controller('PostItemCtrl', function($scope, $stateParams, PostItemRes) {
     var postId = $stateParams.postId;
     PostItemRes.get({
@@ -84,7 +84,7 @@ angular.module('oukanblog.controllers', [])
 
 })
 
-//分类目录
+//分类目录 Category
 .controller('CategoryCtrl', function($rootScope, $scope, $location,$state, $stateParams, PostsRes) {
     var categorySlug = $stateParams.categorySlug;
     $scope.categoryName = $rootScope.categoryName;
@@ -127,7 +127,7 @@ angular.module('oukanblog.controllers', [])
     }
 })
 
-//关于偶看
+//关于偶看 about me
 .controller('AccountCtrl', function($scope, PageItemRes) {
     PageItemRes.get({
         pageId: '605'

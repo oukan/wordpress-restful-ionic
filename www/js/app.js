@@ -1,7 +1,7 @@
 /* by: 偶看 
  * http://www.oukan.net
- * 2015-04-16
- * 基于 tabs 修改
+ * 2015-07-26
+ * base tabs
  */
 
 angular.module('oukanblog', [
