@@ -18,3 +18,4 @@
 <p>04.14 基于tabs开发，实现显示最近10篇文章、微博客和关于偶看</p>
 <p>04.15 添加左侧导航条</p>
 <p>07.09 升级Ionic到1.0.1版本</p>
+<p>07.26 add featured image in dash category and search page</p>
