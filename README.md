@@ -1,9 +1,7 @@
 # Wordpress-restful-ionic
-wordpress-restful-ionic是Wordpress使用WP-REST-API插件作为RESTful后台，再通过Ionic来读取数据，并制作成APP。 
+Wordpress-restful-ionic is Wordpress use WP-REST-API to be a RESTful service，through Ionic to make a APP。 
 
-通过Wordpress强大的插件，可以满足大部分需求。
-
-该项目是偶看为学习并实践Ionic而制作
+[中文介绍](https://github.com/oukan/wordpress-restful-ionic/blob/master/README.md)
 
 ## Required software
 
@@ -11,7 +9,7 @@ Ionic http://ionicframework.com/
 
 Wordpress https://wordpress.org/
 
-wp-rest-api http://wp-api.org/
+WP-REST-API http://wp-api.org/
 
 ## Step
 <pre>$ npm install </pre>
@@ -23,10 +21,10 @@ wp-rest-api http://wp-api.org/
 
 ## Upgrade log
 ###2015
-04.14 基于tabs开发，实现显示最近10篇文章、微博客和关于偶看
+04.14 init project
 
-04.15 添加左侧导航条
+04.15 add left side menus
 
-07.09 升级Ionic到1.0.1版本
+07.09 Upgrade to Ionic  1.0.1
 
 07.26 add featured image in dash category and search page
