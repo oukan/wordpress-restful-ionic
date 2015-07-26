@@ -1,7 +1,7 @@
 # Wordpress-restful-ionic
 Wordpress-restful-ionic is Wordpress use WP-REST-API to be a RESTful service，through Ionic to make a APP。 
 
-[中文介绍](https://github.com/oukan/wordpress-restful-ionic/blob/master/README.md)
+[中文介绍](https://github.com/oukan/wordpress-restful-ionic/blob/master/README-cn.md)
 
 ## Required software
 
