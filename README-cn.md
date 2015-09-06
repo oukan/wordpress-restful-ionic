@@ -30,3 +30,9 @@ wp-rest-api http://wp-api.org/
 07.09 升级Ionic到1.0.1版本
 
 07.26 在 category and search 页面添加‘特色图像’
+
+09.06 升级Ionic到1.1版本
+
+## License
+
+###MIT

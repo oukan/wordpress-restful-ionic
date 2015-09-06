@@ -28,3 +28,9 @@ WP-REST-API http://wp-api.org/
 07.09 Upgrade to Ionic  1.0.1
 
 07.26 add featured image in dash category and search page
+
+09.06 Upgrade to Ionic  1.1
+
+## License
+
+###MIT
