@@ -33,6 +33,8 @@ wp-rest-api http://wp-api.org/
 
 09.06 升级Ionic到1.1版本
 
+09.06 添加分享APP的功能
+
 ## License
 
 ###MIT

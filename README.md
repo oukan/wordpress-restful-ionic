@@ -31,6 +31,8 @@ WP-REST-API http://wp-api.org/
 
 09.06 Upgrade to Ionic  1.1
 
+09.06 add share this APP
+
 ## License
 
 ###MIT

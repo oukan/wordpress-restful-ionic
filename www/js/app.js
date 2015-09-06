@@ -66,14 +66,24 @@ angular.module('oukanblog', [
         })
 
     .state('tab.search', {
-            url: '/search',
-            views: {
-                'tab-dash': {
-                    templateUrl: 'templates/search.html',
-                    controller: 'SearchCtrl'
-                }
+        url: '/search',
+        views: {
+            'tab-dash': {
+                templateUrl: 'templates/search.html',
+                controller: 'SearchCtrl'
             }
-        })
+        }
+    })
+
+    .state('tab.share', {
+        url: "/share",
+        views: {
+            'tab-dash': {
+                templateUrl: "templates/share.html",
+                controller: 'ShareCtrl'
+            }
+        }
+    })
 
     .state('tab.weibo', {
             url: '/weibo',

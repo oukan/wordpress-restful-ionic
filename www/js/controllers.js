@@ -85,11 +85,11 @@ angular.module('oukanblog.controllers', [])
 })
 
 //分类目录 Category
-.controller('CategoryCtrl', function($rootScope, $scope, $location,$state, $stateParams, PostsRes) {
+.controller('CategoryCtrl', function($rootScope, $scope, $location, $state, $stateParams, PostsRes) {
     var categorySlug = $stateParams.categorySlug;
     $scope.categoryName = $rootScope.categoryName;
-    if($location.path().indexOf('weibo') !== -1){
-        $scope.categoryName  = '微博客';
+    if ($location.path().indexOf('weibo') !== -1) {
+        $scope.categoryName = '微博客';
         categorySlug = 'weibo'
     }
 
@@ -134,4 +134,22 @@ angular.module('oukanblog.controllers', [])
     }, function(data) {
         $scope.about = data;
     })
-});
+})
+
+//分享 share
+.controller('ShareCtrl', ['$scope', function($scope) {
+    $scope.whatsappShare = function() {
+        window.plugins.socialsharing.shareViaWhatsApp('Digital Signature Maker', null /* img */ , "https://play.google.com/store/apps/details?id=com.prantikv.digitalsignaturemaker" /* url */ , null, function(errormsg) {
+            alert("Error: Cannot Share")
+        });
+    }
+    $scope.twitterShare = function() {
+        window.plugins.socialsharing.shareViaTwitter('Digital Signature Maker', null /* img */ , 'https://play.google.com/store/apps/details?id=com.prantikv.digitalsignaturemaker', null, function(errormsg) {
+            alert("Error: Cannot Share")
+        });
+    }
+    $scope.OtherShare = function() {
+        window.plugins.socialsharing.share('Digital Signature Maker', null, null, 'https://play.google.com/store/apps/details?id=com.prantikv.digitalsignaturemaker');
+    }
+
+}])
