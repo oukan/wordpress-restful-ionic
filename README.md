@@ -20,7 +20,12 @@ WP-REST-API http://wp-api.org/
 1. You can change your 'apiUrl' in www/js/app.js.
 
 ## Upgrade log
+###2016
+
+01.22 Upgrade to Ionic  1.2.4
+
 ###2015
+
 04.14 init project
 
 04.15 add left side menus

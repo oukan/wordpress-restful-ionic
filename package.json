@@ -1,6 +1,6 @@
 {
   "name": "oukan-wordpress-ionic",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "oukan-wordpress-ionic: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",

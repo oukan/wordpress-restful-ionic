@@ -2,7 +2,7 @@
   "name": "oukan-wordpress-ionic",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.1",
+    "ionic": "driftyco/ionic-bower#1.2.4",
     "angular-resource": "1.4.3"
   }
 }
