@@ -9,9 +9,9 @@ wordpress-restful-ionic是Wordpress使用WP-REST-API插件作为RESTful后台，
 
 Ionic http://ionicframework.com/
 
-Wordpress https://wordpress.org/
+Wordpress https://wordpress.org/ 
 
-wp-rest-api http://wp-api.org/
+wp-rest-api http://wp-api.org/ Version 1
 
 ## 使用步骤
 <pre>$ npm install </pre>

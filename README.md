@@ -9,7 +9,7 @@ Ionic http://ionicframework.com/
 
 Wordpress https://wordpress.org/
 
-WP-REST-API http://wp-api.org/
+WP-REST-API http://wp-api.org/ Version 1
 
 ## Step
 <pre>$ npm install </pre>
