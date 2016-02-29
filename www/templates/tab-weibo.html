@@ -1,12 +1,12 @@
 <ion-view view-title="{{categoryName}}">
     <ion-content class="padding">
         <div ng-repeat="p in items">
-            <div ng-click="postItem(p.ID)">
+            <div ng-click="postItem(p.id)">
                 <div class="bubble left" ng-if="$even">
-                    <div ng-bind-html="p.excerpt"></div>
+                    <div ng-bind-html="p.excerpt.rendered"></div>
                 </div>
                 <div class="bubble right" ng-if="$odd">
-                    <div ng-bind-html="p.excerpt"></div>
+                    <div ng-bind-html="p.excerpt.rendered"></div>
                 </div>
             </div>
         </div>

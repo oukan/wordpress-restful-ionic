@@ -11,7 +11,7 @@ Ionic http://ionicframework.com/
 
 Wordpress https://wordpress.org/ 
 
-wp-rest-api http://wp-api.org/ Version 1
+wp-rest-api http://v2.wp-api.org/
 
 ## 使用步骤
 <pre>$ npm install </pre>
@@ -25,6 +25,8 @@ wp-rest-api http://wp-api.org/ Version 1
 ###2016
 
 01.22 升级Ionic到1.2.4版本
+
+02.29 Rest API 升级到 Version 2.0
 
 ###2015
 

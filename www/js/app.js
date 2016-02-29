@@ -25,7 +25,7 @@ angular.module('oukanblog', [
         });
     })
     .constant('configuration', {
-        apiUrl: 'http://www.oukan.net/wp-json',
+        apiUrl: 'http://www.oukan.net/wp-json/wp/v2',
         websiteName: '偶看博客'
     })
 

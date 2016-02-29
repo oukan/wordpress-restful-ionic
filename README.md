@@ -9,7 +9,7 @@ Ionic http://ionicframework.com/
 
 Wordpress https://wordpress.org/
 
-WP-REST-API http://wp-api.org/ Version 1
+wp-rest-api http://v2.wp-api.org/
 
 ## Step
 <pre>$ npm install </pre>
@@ -23,6 +23,8 @@ WP-REST-API http://wp-api.org/ Version 1
 ###2016
 
 01.22 Upgrade to Ionic  1.2.4
+
+02.29 Upgrade to WP REST API 2.0
 
 ###2015
 

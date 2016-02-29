@@ -1,11 +1,11 @@
 <ion-view view-title="{{websiteName}}-最新博文">
     <ion-content class="padding">
         <div class="list card" ng-repeat="p in items">
-            <div ng-click="postItem(p.ID)">
-                <div class="item item-divider">{{p.title}}</div>
+            <div ng-click="postItem(p.id)">
+                <div class="item item-divider">{{p.title.rendered}}</div>
                 <div class="item item-body">
                     <img class="featured-image" ng-src="{{p.featured_image.attachment_meta.sizes.thumbnail.url}}">
-                    <div ng-bind-html="p.excerpt"></div>
+                    <div ng-bind-html="p.excerpt.rendered"></div>
                 </div>
             </div>
         </div>

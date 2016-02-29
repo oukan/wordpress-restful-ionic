@@ -11,11 +11,11 @@
             </div>
         </div>
         <div class="list card" ng-repeat="p in postList">
-            <div ng-click="postItem(p.ID)">
-                <div class="item item-divider">{{p.title}}</div>
+            <div ng-click="postItem(p.id)">
+                <div class="item item-divider">{{p.title.rendered}}</div>
                 <img class="featured-image" ng-src="{{p.featured_image.attachment_meta.sizes.thumbnail.url}}">
                 <div class="item item-body">
-                    <div ng-bind-html="p.excerpt"></div>
+                    <div ng-bind-html="p.excerpt.rendered"></div>
                 </div>
             </div>
         </div>

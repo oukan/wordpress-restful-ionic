@@ -36,7 +36,7 @@ angular.module('oukanblog.services', [])
     }])
     //博文分类 Category
     .factory('TaxonomiesRes', ['$resource', 'configuration', function($resource, configuration) {
-        var tRes = $resource(configuration.apiUrl + '/taxonomies/category/terms', {}, {
+        var tRes = $resource(configuration.apiUrl + '/categories', {}, {
             query: {
                 method: 'GET',
                 cache: true,
