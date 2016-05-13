@@ -28,6 +28,9 @@ wp-rest-api http://v2.wp-api.org/
 
 02.29 Rest API 升级到 Version 2.0
 
+05.13 升级Ionic到1.3.1版本
+
+
 ###2015
 
 04.14 基于tabs开发，实现显示最近10篇文章、微博客和关于偶看

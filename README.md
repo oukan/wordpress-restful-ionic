@@ -26,6 +26,10 @@ wp-rest-api http://v2.wp-api.org/
 
 02.29 Upgrade to WP REST API 2.0
 
+05.13 Upgrade to Ionic 1.1
+
+
+
 ###2015
 
 04.14 init project
